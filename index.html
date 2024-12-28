@@ -3,107 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Data Science Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
-            background-image: url('https://unsplash.com/photos/graphical-user-interface--WXQm_NTK0U');
-            background-size: cover;
-            background-attachment: fixed;
-            font-family: Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
+            font-family: 'Arial', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f5f5f5;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 10px;
+        .navbar {
+            background: #007bff;
         }
-        header, section, footer {
-            margin-bottom: 20px;
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-        h1, h2 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #3498db;
-        }
-        .grid {
-            display: flex;
-            justify-content: space-around;
-        }
-        .grid-item {
-            flex: 1;
-            text-align: center;
-            margin: 10px;
-        }
-        .portfolio-link {
-            display: block;
-            padding: 10px;
-            background-color: #3498db;
+        .navbar-nav .nav-link {
             color: white;
-            border-radius: 5px;
-            text-decoration: none;
+            margin-right: 15px;
+            transition: color 0.3s ease;
         }
-        .portfolio-link:hover {
-            background-color: #2980b9;
+        .navbar-nav .nav-link:hover {
+            color: #ffc107;
         }
-        footer p {
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            background: linear-gradient(to bottom, rgba(0, 123, 255, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero h1 span {
+            color: #ffc107;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ffc107;
+        }
+        .section {
+            padding: 60px 20px;
+        }
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .about, .projects, .certificates {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 40px;
+        }
+        .about img {
+            border-radius: 50%;
+            max-width: 200px;
+            transition: transform 0.3s;
+        }
+        .about img:hover {
+            transform: scale(1.1);
+        }
+        .projects .card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .projects .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #007bff;
+            color: white;
         }
         footer a {
-            color: #3498db;
+            color: #ffc107;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <h1>Welcome</h1>
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <div>
+            <h1>Hello, I'm <span>Anand Murugesan</span></h1>
+            <p>Aspiring Data Scientist | Machine Learning Enthusiast | AI Innovator</p>
             <p>
-                I am an aspiring Data Scientist with a Master's degree in Data Science and 14 years of IT experience. After leading a team in India, I transitioned to AI and data roles, exploring a new country and culture. I've visited many places in Canterbury, Auckland, and Wellington. I'm confident in my ability to contribute to your team.
+                As a resourceful professional with diverse experience in data analysis and modeling, I possess a strong background in Python, SQL, and data visualization tools.
             </p>
         </div>
-    </header>
-    <section id="experience">
+    </div>
+
+    <!-- About Section -->
+    <div class="section about" id="about">
         <div class="container">
-            <h2>Experience Across Various Industries</h2>
-            <p>
-                In previous roles, I've collaborated with Fortune 500 clients in healthcare, retail, telecom, automobile, and insurance sectors. My skills include Python, SQL, Oracle, DB2, and ETL tools like Informatica. I've streamlined data processing with Power BI, SQL, and DAX, and developed reporting structures using SSRS, SSIS, and SSAS.
-            </p>
-        </div>
-    </section>
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="grid">
-                <div class="grid-item">
-                    <a href="aboutme.html" class="portfolio-link">About Me</a>
+            <h2 class="section-heading">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="images/about/Photo.jpg" alt="Your Photo">
                 </div>
-                <div class="grid-item">
-                    <a href="project.html" class="portfolio-link">Projects</a>
+                <div class="col-md-8">
+                    <p>
+                        With a Master's degree in Data Science and a passion for technology, I have worked across diverse industries 
+                        such as healthcare, retail, telecom, and insurance. My expertise spans data analysis, machine learning, 
+                        and AI-driven solutions, contributing to impactful projects with Fortune 500 companies.
+                </p>
+                <p>
+                    Previously a Team Lead in India, I am now specializing in AI and data-centric roles in New Zealand, embracing innovation 
+                    and delivering value. I thrive on solving complex problems and driving business insights through data.
+                </p>
+                <p>
+                I am quite adventorous I have done bungee jumping, scuba diving, snorkelling, hiking, enjoy swimming, traveling, and playing cricket and chess.
+                </p>
                 </div>
             </div>
         </div>
-    </section>
-    <footer>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section projects" id="projects">
         <div class="container">
-            <p>Connect with me on <a href="https://www.linkedin.com/in/anand-dataanalyst/">LinkedIn</a></p>
+            <h2 class="section-heading">Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h4>ETL Pipeline</h4>
+                        <p>Designed scalable ETL processes using Informatica and Oracle.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h4>AI Model</h4>
+                        <p>Built a predictive model using Python and TensorFlow.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h4>Mainframe Automation</h4>
+                        <p>Streamlined legacy systems with COBOL and JCL.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- Certificates Section -->
+    <div class="section certificates" id="certificates">
+        <div class="container">
+            <h2 class="section-heading">Certificates</h2>
+            <p>Certified in Data Science, Machine Learning, and Cloud Computing.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>Connect with me on 
+            <div class="social-icons">
+                <a href="https://github.com/Anandsgithub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anand-datascientist/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </p>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
