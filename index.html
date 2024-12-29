@@ -13,7 +13,7 @@ body {
             background-color: #f8f9fa;
         }
         .navbar {
-            background: #4c3b99; /* Deep Indigo */
+            background: #4c3b99;
         }
         .navbar-brand {
             font-size: 1.5rem;
@@ -26,7 +26,7 @@ body {
             transition: color 0.3s ease;
         }
         .navbar-nav .nav-link:hover {
-            color: #ffd700; /* Gold Accent */
+            color: #ffd700; 
         }
         .navbar-toggler {
             border-color: #ffffff;
@@ -40,7 +40,7 @@ body {
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant Gradient */
+            background: linear-gradient(135deg, #6a11cb, #2575fc); 
             color: white;
             padding: 20px;
         }
@@ -49,7 +49,7 @@ body {
             font-weight: bold;
         }
         .hero h1 span {
-            color: #ffd700; /* Gold Accent */
+            color: #ffd700; 
         }
         .section {
             padding: 60px 20px;
@@ -85,7 +85,7 @@ body {
         footer {
             text-align: center;
             padding: 20px;
-            background: #4c3b99; /* Deep Indigo */
+            background: #4c3b99; 
             color: white;
         }
         footer a {
@@ -140,37 +140,137 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
+.navbar .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #eaeaea;
+    transition: color 0.3s, transform 0.3s;
+}
+.navbar .nav-link:hover {
+    color: #ffd700;
+    transform: scale(1.05);
+}
+.navbar .nav-link i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+.navbar .nav-item.active .nav-link {
+    color: #ffd700;
+    font-weight: bold;
+}
+.fas.fa-smile {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin-left: 5px;
+}
     </style>
 </head>
 <body>
-   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Welcome to my data science portfolio!</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Skillset</a></li>
-                </ul>
+   <!-- Hero Section -->
+<div id="home">
+    <div id="heroCarousel" class="carousel slide hero" data-ride="carousel" data-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-8">
+                            <h1>Welcome to my data science portfolio!</h1>
+							<p class="lead"> Dedicated to transforming complex data into actionable insights to drive positive change.</p>
+						 <!--	<p>I'm glad you're here to explore my work and passion for data-driven insights <i class="fas fa-smile"></i></p>
+                        <p>Leveraging data insights to drive business growth and innovation</p>
+                            <p class="lead">Transforming raw data into meaningful insights</p>  -->
+                        </div>
+                    </div>
+                </div>
             </div>
+			<div class="carousel-item">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-8">
+                            <h1>Hello, I'm <span>Anand </span></h1>
+                            <p class="lead">Data Enthusiast | Lifelong Learner | Innovator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       <!--     <div class="carousel-item">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-8">
+                            <h1>Thanks for visiting my page</h1>
+                            <p>You can find my work, here </p>
+                      <!--  <p class="lead">AI Enthusiast and Innovator</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>  -->
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="hero" id="home">
-        <div>
-            <h1>Hello, I'm <span>Anand Murugesan</span></h1>
-            <p>Aspiring Data Scientist | Machine Learning Enthusiast | AI Innovator</p>
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand" href="#home"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="#home">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="#about">
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="#projects">
+                        <span>Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="#certificates">
+                        <span>Certificates</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="#skillset">
+                        <span>Skillset</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="https://www.linkedin.com/in/anand-datascientist/" target="_blank">
+                        <i class="fab fa-linkedin mr-1"></i><span>LinkedIn</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
+<script>
+    // Scroll to top when Home link is clicked
+    $('.nav-link[href="#home"]').click(function() {
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
+        return false;
+    });
 
+    // Activate carousel
+    $('.carousel').carousel({
+        interval: 5000
+    });
+</script>
     <!-- About Section -->
     <div class="section about" id="about">
         <div class="container">
@@ -194,7 +294,6 @@ body {
             </div>
         </div>
     </div>
-
     <!-- Projects Section -->
     <div class="container projects" id="projects">
         <h2 class="section-heading">Projects</h2>
@@ -206,131 +305,495 @@ body {
         </div>
         <div class="row">
            <!-- AI Project -->
-            <div class="col-md-4 project-card ai active">
-                <div class="card">
-                    <img src="images/skills/Data0.png" class="card-img-top" alt="AI Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Data science Intern project</h5>
-                        <p>Built a predictive model using Python and SVR.</p>
-                        <div class="tags">
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-4 project-card ai active">
-                <div class="card">
-                    <img src="images/skills/Data1.png" class="card-img-top" alt="AI Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Data activism project</h5>
-                        <p>Analyzing data: Using data and metadata to reconstruct facts.</p>
-                        <div class="tags">
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-4 project-card ai active">
-                <div class="card">
-                    <img src="images/skills/Data2.png" class="card-img-top" alt="AI Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Opening Move Effectiveness</h5>
-                        <p>Analyzing opening moves: Using API data to find the best opening moves.</p>
-                        <div class="tags">
-                            <span>Machine Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<!-- ETL Project -->
-            <div class="col-md-4 project-card etl active">
-                <div class="card">
-                    <img src="images/skills/ETL.png" class="card-img-top" alt="ETL Project">
-                    <div class="card-body">
-                        <h5 class="card-title">ETL Pipeline</h5>
-                        <p>Designed scalable ETL processes using Informatica and Oracle.</p>
-                        <div class="tags">
-                            <span>ETL Migration</span>
-                            <span>Data Warehousing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-4 project-card etl active">
-                <div class="card">
-                    <img src="images/skills/ETLM.png" class="card-img-top" alt="ETL Project">
-                    <div class="card-body">
-                        <h5 class="card-title">ETL Pipeline</h5>
-                        <p>Designed scalable ETL processes using Informatica and Oracle.</p>
-                        <div class="tags">
-                            <span>ETL Migration</span>
-                            <span>Data Warehousing</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 project-card etl active">
-                <div class="card">
-                    <img src="images/skills/ETLA.png" class="card-img-top" alt="ETL Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Advanced ETL Framework</h5>
-                        <p>Implemented automation scripts to ensure seamless data extraction and transformation from multiple sources, reducing manual intervention by 80%.</p>
-                        <div class="tags">
-                            <span>ETL Automation</span>
-                            <span>Real-time Integration</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Mainframe Project -->
-            <div class="col-md-4 project-card mainframe active">
-                <div class="card">
-                    <img src="images/skills/main1.png" class="card-img-top" alt="Mainframe Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Mainframe Product</h5>
-                        <p>Anthem Health Rewards.</p>
-                        <div class="tags">
-                            <span>Mainframe</span>
-                            <span>Legacy Systems</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-4 project-card mainframe active">
-                <div class="card">
-                    <img src="images/skills/main0.png" class="card-img-top" alt="Mainframe Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Mainframe Automation</h5>
-                        <p>Streamlined legacy systems with COBOL and JCL automation.</p>
-                        <div class="tags">
-                            <span>Mainframe</span>
-                            <span>Legacy Systems</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-4 project-card mainframe active">
-                <div class="card">
-                    <img src="images/skills/main2.png" class="card-img-top" alt="Mainframe Project">
-                    <div class="card-body">
-                        <h5 class="card-title">Mainframe Automation</h5>
-                        <p>Streamlined legacy systems with COBOL and JCL automation.</p>
-                        <div class="tags">
-                            <span>Mainframe</span>
-                            <span>Legacy Systems</span>
-                        </div>
-                    </div>
-                </div>
+          <div class="col-md-4 project-card ai active">
+    <div class="card" data-toggle="modal" data-target="#projectModal">
+        <img src="images/skills/Data0.png" class="card-img-top" alt="AI Project">
+        <div class="card-body">
+            <h5 class="card-title">Data science Intern project</h5>
+            <p>Built a predictive model using Python and SVR.</p>
+            <div class="tags">
+                <span>Machine Learning</span>
             </div>
         </div>
     </div>
-
+</div>
+<!-- Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="projectModalLabel">Data Science Intern Project</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Did countries with access to traditional financial services lacking digital access experience more COVID-19 cases?</h5>
+                <p>This project investigates the correlation between access to traditional financial services and the impact of COVID-19. By analyzing data from various countries, the project aims to understand whether the lack of digital financial services contributed to higher COVID-19 cases.</p>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> Python</li>
+                    <li><i class="fas fa-chart-bar text-success"></i> Tableau</li>
+                    <li><i class="fas fa-globe text-info"></i> Web Scraping</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#projectModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+			<div class="col-md-4 project-card ai active">
+    <div class="card" data-toggle="modal" data-target="#dataActivismModal">
+        <img src="images/skills/Data1.png" class="card-img-top" alt="AI Project">
+        <div class="card-body">
+            <h5 class="card-title">Data Activism Project</h5>
+            <p>Analyzing data: Using data and metadata to reconstruct facts.</p>
+            <div class="tags">
+                <span>Machine Learning</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="dataActivismModal" tabindex="-1" aria-labelledby="dataActivismModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="dataActivismModalLabel">Data Activism Project</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Data Activism for the Christchurch Community</h5>
+                <p>This project focuses on important events and festivals within the Christchurch Muslim community. It aims to organize events based on traffic, weather, and other data to ensure smooth and successful gatherings.</p>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> Python</li>
+                    <li><i class="fas fa-chart-bar text-success"></i> Tableau</li>
+                    <li><i class="fas fa-cloud text-info"></i> SQL</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#dataActivismModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+<div class="col-md-4 project-card ai active">
+    <div class="card" data-toggle="modal" data-target="#openingMoveModal">
+        <img src="images/skills/Data2.png" class="card-img-top" alt="AI Project">
+        <div class="card-body">
+            <h5 class="card-title">Opening Move Effectiveness</h5>
+            <p>Analyzing opening moves: Using API data to find the best opening moves.</p>
+            <div class="tags">
+                <span>Machine Learning</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="openingMoveModal" tabindex="-1" aria-labelledby="openingMoveModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="openingMoveModalLabel">Opening Move Effectiveness</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Best Opening Moves and Strategic Piece Utilization</h5>
+                <p>This project analyzes the effectiveness of various opening moves in chess. By leveraging API data, it identifies the best opening strategies and piece placements to increase the chances of winning the game. The project covers optimal moves for different pieces, from the King to the Bishop, and provides insights into successful game strategies.</p>
+                <h6>Key Findings:</h6>
+                <ul>
+                    <li><strong>Central Control:</strong> Utilize pawns to control the center of the board early in the game.</li>
+                    <li><strong>Piece Development:</strong> Develop knights and bishops before moving the Queen.</li>
+                    <li><strong>Effective Pawn Structure:</strong> Maintain a solid pawn structure to support piece development.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> Python</li>
+                    <li><i class="fas fa-database text-info"></i> API Data Integration</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#openingMoveModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+			<!-- ETL Project -->
+           <div class="col-md-4 project-card etl active">
+    <div class="card" data-toggle="modal" data-target="#etlModal">
+        <img src="images/skills/ETL.png" class="card-img-top" alt="ETL Project">
+        <div class="card-body">
+            <h5 class="card-title">ETL Pipeline</h5>
+            <p>Designed scalable ETL processes using Informatica and Oracle.</p>
+      <!--      <div class="tags">
+                <span>ETL Migration</span>
+                <span>Data Warehousing</span>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="etlModal" tabindex="-1" aria-labelledby="etlModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="etlModalLabel">ETL Development Pipeline</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Combining Data from Multiple Provider Sources into EPDSV2</h5>
+                <p>This project involved integrating data from various provider sources into a single repository called EPDSV2. Providers are stored in Oracle, sourced from Mainframe DB2. The provider records are then sent to downstream systems for further processing or changes. This comprehensive ETL process ensures data accuracy and consistency across multiple platforms.</p>
+                <h6>Key Highlights:</h6>
+                <ul>
+                    <li><strong>Data Integration:</strong> Seamlessly integrated data from Mainframe DB2 to Oracle.</li>
+                    <li><strong>Data Validation:</strong> Implemented robust data validation and cleansing routines.</li>
+                    <li><strong>Real-Time Processing:</strong> Enabled real-time data processing and updates.</li>
+                    <li><strong>Downstream Systems Integration:</strong> Ensured accurate data transfer to downstream systems for further processing.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> Informatica</li>
+                    <li><i class="fas fa-database text-success"></i> Oracle</li>
+                    <li><i class="fas fa-server text-info"></i> Mainframe DB2</li>
+					
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#etlModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+			<div class="col-md-4 project-card etl active">
+    <div class="card" data-toggle="modal" data-target="#etlMigrationModal">
+        <img src="images/skills/ETLM.png" class="card-img-top" alt="ETL Project">
+        <div class="card-body">
+            <h5 class="card-title">ETL Migration</h5>
+            <p>Migrated millions of records through seamless integration using Informatica and Teradata.</p>
+      <!--      <div class="tags">
+                <span>Informatica</span>
+                <span>Teradata</span>
+            </div>  -->
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="etlMigrationModal" tabindex="-1" aria-labelledby="etlMigrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="etlMigrationModalLabel">ETL Migration</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Migrating Data from New Business into EPDSV2</h5>
+                <p>This project involves migrating data from various new business sources into a single repository called EPDSV2. The data from providers is stored in Teradata, sourced from Mainframe DB2, IMS DB, SQL, Snowflake, and Oracle. The provider records are then processed in UNIX and Shell environments for further downstream processing or changes. This comprehensive ETL process ensures data accuracy and consistency across multiple platforms.</p>
+                <h6>Key Highlights:</h6>
+                <ul>
+                    <li><strong>Data Integration:</strong> Seamlessly integrated data from Mainframe DB2, IMS DB, SQL, Snowflake, and Oracle into Teradata.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> Informatica</li>
+                    <li><i class="fas fa-database text-success"></i> Teradata</li>
+                    <li><i class="fas fa-server text-info"></i> Mainframe DB2, IMS DB, SQL, Snowflake, Oracle</li>
+                    <li><i class="fas fa-terminal text-warning"></i> UNIX, Shell</li>
+					<li><i class="fas fa-chart-bar text-success"></i> Power BI</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#etlMigrationModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+            <div class="col-md-4 project-card etl active">
+    <div class="card" data-toggle="modal" data-target="#etlAutomationModal">
+        <img src="images/skills/ETLA.png" class="card-img-top" alt="ETL Project">
+        <div class="card-body">
+            <h5 class="card-title">ETL Automation</h5>
+            <p>Implemented automation scripts to ensure seamless data extraction and transformation from multiple sources, reducing manual intervention by 90%.</p>
+                     <!--    <div class="tags">
+                            <span></span>
+                            <span>Real-time Integration</span>
+                        </div> -->
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="etlAutomationModal" tabindex="-1" aria-labelledby="etlAutomationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="etlAutomationModalLabel">ETL Automation</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Automating Data Extraction and Transformation</h5>
+                <p>This project focuses on automating the entire ETL process, eliminating the need for human intervention. Data extraction and transformation are performed seamlessly across multiple sources, and an email notification is triggered upon process completion. The aim is to enhance efficiency, accuracy, and timeliness in data processing.</p>
+                <h6>Key Highlights:</h6>
+                <ul>
+                    <li><strong>Full Automation:</strong> Implemented scripts that automate the entire ETL process, from data extraction to transformation, without human intervention.</li>
+                    <li><strong>Email Notifications:</strong> Set up automated email notifications to alert stakeholders upon successful process completion.</li>
+                    <li><strong>Efficiency Improvement:</strong> Achieved a significant reduction in manual efforts, saving time and resources.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> Python</li>
+                    <li><i class="fas fa-terminal text-warning"></i> UNIX, Shell</li>
+                    <li><i class="fas fa-envelope text-info"></i> Automated Email Notifications</li>
+					<li><i class="fas fa-chart-bar text-success"></i> Power BI</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#etlAutomationModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+            <!-- Mainframe Project -->
+			<div class="col-md-4 project-card mainframe active">
+    <div class="card" data-toggle="modal" data-target="#mainframeModal">
+        <img src="images/skills/main0.png" class="card-img-top" alt="Mainframe Project">
+        <div class="card-body">
+            <h5 class="card-title">Development</h5>
+            <p>Streamlined legacy systems.</p>
+           <!--    <div class="tags">
+                <span>Mainframe</span>
+                <span>Legacy Systems</span>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="mainframeModal" tabindex="-1" aria-labelledby="mainframeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="mainframeModalLabel">Membership Enrollment</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Healthcare Membership Enrollment Automation</h5>
+                <p>This project focuses on automating the enrollment process for healthcare insurance memberships. Customers can enroll individually, as groups, or as families. All customer details are stored and processed through batch processing, ensuring efficient and accurate data handling. The system leverages mainframe technologies to streamline and automate legacy processes, reducing manual intervention and improving overall efficiency.</p>
+                <h6>Key Highlights:</h6>
+                <ul>
+                    <li><strong>Enrollment Automation:</strong> Enabled seamless enrollment for individual, group, and family memberships.</li>
+                    <li><strong>Batch Processing:</strong> Implemented robust batch processing to handle large volumes of customer data efficiently.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> COBOL, EASYTRIEVE</li>
+                    <li><i class="fas fa-database text-success"></i> DB2, VSAM</li>
+                    <li><i class="fas fa-server text-info"></i> JCL, SPUFI, Endevor R4.0, Change man</li>
+                    <li><i class="fas fa-file-alt text-warning"></i> File Handling Tools: Insync V2.7, File Manager, FMIMS</li>
+                    <li><i class="fas fa-tasks text-danger"></i> JCL Jobs Monitoring Tools: CA-7</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#mainframeModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+		   <div class="col-md-4 project-card mainframe active">
+    <div class="card" data-toggle="modal" data-target="#healthRewardsModal">
+        <img src="images/skills/main1.png" class="card-img-top" alt="Mainframe Project">
+        <div class="card-body">
+            <h5 class="card-title">New Business Product</h5>
+            <p>Anthem Health Rewards.</p>
+         <!--    <div class="tags">
+                <span>Mainframe</span>
+                <span>Legacy Systems</span>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="healthRewardsModal" tabindex="-1" aria-labelledby="healthRewardsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="healthRewardsModalLabel">Anthem Health Rewards</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Anthem Health Rewards Program</h5>
+                <p>This project focuses on developing and automating the enrollment process for Anthem Health Rewards, a program designed to incentivize healthy behaviors among members.</p>
+                <h6>Key Highlights:</h6>
+                <ul>
+                    <li><strong>Enrollment for Health Rewards:</strong> Seamlessly automates the enrollment process for Anthem Health Rewards</li>
+                    <li><strong>System Integration:</strong> Integrates with multiple downstream systems for further data processing and updates.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> COBOL</li>
+                    <li><i class="fas fa-database text-success"></i> DB2, VSAM</li>
+                    <li><i class="fas fa-server text-info"></i> JCL, SPUFI, Endevor R4.0, Change man</li>
+                    <li><i class="fas fa-file-alt text-warning"></i> File Handling Tools: Insync V2.7, File Manager, FMIMS</li>
+                    <li><i class="fas fa-tasks text-danger"></i> JCL Jobs Monitoring Tools: CA-7</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#healthRewardsModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+			<div class="col-md-4 project-card mainframe active">
+    <div class="card" data-toggle="modal" data-target="#unpaidClaimsModal">
+        <img src="images/skills/main2.png" class="card-img-top" alt="Mainframe Project">
+        <div class="card-body">
+            <h5 class="card-title">Enhancement</h5>
+            <p>Streamlined Billing systems </p>
+       <!--     <div class="tags">
+                <span>Mainframe</span>
+                <span>Legacy Systems</span>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="unpaidClaimsModal" tabindex="-1" aria-labelledby="unpaidClaimsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="unpaidClaimsModalLabel">Streamlined Billing systems</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Generating Reports for Unpaid Claims and Verifying Provider Details</h5>
+                <p>This project focuses on generating comprehensive reports of providers with unpaid claims. It ensures that the billing process remains uninterrupted by verifying addresses and other demographic details.</p>
+                <h6>Key Highlights:</h6>
+                <ul>
+                    <li><strong>Data Verification:</strong> Implemented processes to verify provider addresses and demographic details.</li>
+                    <li><strong>Error Handling:</strong> Developed robust error handling and logging mechanisms to ensure data integrity.</li>
+                    <li><strong>System Integration:</strong> Integrated with existing billing systems to ensure seamless data flow.</li>
+                </ul>
+                <h6>Skills Used:</h6>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-code text-primary"></i> EASYTRIEVE</li>
+                    <li><i class="fas fa-database text-success"></i> DB2</li>
+                    <li><i class="fas fa-server text-info"></i> JCL</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        // Animate modal entrance
+        $('#unpaidClaimsModal').on('show.bs.modal', function (e) {
+            $('.modal-content').addClass('animate__animated animate__fadeIn');
+        });
+    });
+</script>
+        </div>
+    </div>
    <!-- Certificates Section -->
 <div class="section certificates" id="certificates">
     <div class="container">
         <h2 class="section-heading">Certificates</h2>
         <div class="row">
-            <div class="col-md-6">
+		<div class="col-md-4">
+                <div class="card text-center shadow-sm border-0">
+                    <div class="card-body">
+                        <i class="fas fa-graduation-cap fa-3x text-info mb-3"></i>
+                        <h5 class="card-title">Masters in Data Science</h5>
+                        <p class="card-text">University of Canterbury, Christchurch</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
                 <div class="card text-center shadow-sm border-0">
                     <div class="card-body">
                         <i class="fas fa-award fa-3x text-primary mb-3"></i>
@@ -339,7 +802,7 @@ body {
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="card text-center shadow-sm border-0">
                     <div class="card-body">
                         <i class="fas fa-user-shield fa-3x text-success mb-3"></i>
@@ -417,15 +880,15 @@ body {
 </div>	
     <!-- Footer -->
     <footer id="contact">
-        <p>Connect with me on:</p>
+        <p>Connect with me on</p>
         <div class="social-icons">
             <a href="https://github.com/Anandsgithub" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://www.linkedin.com/in/anand-datascientist/" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
+        <p>&copy; 2024 MyPortfolio | Designed with care</p>
     </footer>
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const filterButtons = document.querySelectorAll('.filter-buttons .btn');
