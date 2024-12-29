@@ -7,25 +7,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        body {
+body {
             font-family: 'Arial', sans-serif;
             scroll-behavior: smooth;
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
         }
         .navbar {
-            background: #007bff;
+            background: #4c3b99; /* Deep Indigo */
         }
         .navbar-brand {
             font-size: 1.5rem;
             font-weight: bold;
+            color: #ffffff;
         }
         .navbar-nav .nav-link {
-            color: white;
+            color: #eaeaea;
             margin-right: 15px;
             transition: color 0.3s ease;
         }
         .navbar-nav .nav-link:hover {
-            color: #ffc107;
+            color: #ffd700; /* Gold Accent */
+        }
+        .navbar-toggler {
+            border-color: #ffffff;
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
         .hero {
             height: 100vh;
@@ -33,47 +40,30 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(to bottom, rgba(0, 123, 255, 0.8), rgba(0, 0, 0, 0.8)), url('images/hero-bg.jpg') no-repeat center center/cover;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant Gradient */
             color: white;
             padding: 20px;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
         }
         .hero h1 span {
-            color: #ffc107;
-        }
-        .social-icons a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: transform 0.3s, color 0.3s;
-        }
-        .social-icons a:hover {
-            transform: scale(1.2);
-            color: #ffc107;
+            color: #ffd700; /* Gold Accent */
         }
         .section {
             padding: 60px 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .section-heading {
             text-align: center;
             margin-bottom: 40px;
             font-size: 2rem;
             font-weight: bold;
-        }
-        .about, .projects, .certificates {
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            margin-bottom: 20px;
-            padding: 40px;
+            color: #4c3b99;
         }
         .about img {
             border-radius: 50%;
@@ -95,23 +85,69 @@
         footer {
             text-align: center;
             padding: 20px;
-            background: #007bff;
+            background: #4c3b99; /* Deep Indigo */
             color: white;
         }
         footer a {
-            color: #ffc107;
+            color: #ffd700;
             text-decoration: none;
         }
         footer a:hover {
             text-decoration: underline;
         }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #ffd700;
+        }
+        .filter-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .filter-buttons .btn {
+            margin: 5px;
+        }
+        .filter-buttons .btn.active {
+            background-color: #4c3b99;
+            color: #ffffff;
+        }
+        .project-card {
+            display: none;
+        }
+        .project-card.active {
+            display: block;
+        }
+		.skill-card {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		border-radius: 10px;
+		background: #fff;
+		}
+		.skill-card:hover {
+		transform: translateY(-10px);
+		box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+		}
+		.certificates .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    background: #fff;
+}
+.certificates .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+   <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Portfolio</a>
+            <a class="navbar-brand" href="#">Welcome to my data science portfolio!</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -121,7 +157,7 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Skillset</a></li>
                 </ul>
             </div>
         </div>
@@ -132,9 +168,6 @@
         <div>
             <h1>Hello, I'm <span>Anand Murugesan</span></h1>
             <p>Aspiring Data Scientist | Machine Learning Enthusiast | AI Innovator</p>
-            <p>
-                As a resourceful professional with diverse experience in data analysis and modeling, I possess a strong background in Python, SQL, and data visualization tools.
-            </p>
         </div>
     </div>
 
@@ -150,67 +183,273 @@
                     <p>
                         With a Master's degree in Data Science and a passion for technology, I have worked across diverse industries 
                         such as healthcare, retail, telecom, and insurance. My expertise spans data analysis, machine learning, 
-                        and AI-driven solutions, contributing to impactful projects with Fortune 500 companies.
-                </p>
-                <p>
-                    Previously a Team Lead in India, I am now specializing in AI and data-centric roles in New Zealand, embracing innovation 
-                    and delivering value. I thrive on solving complex problems and driving business insights through data.
-                </p>
-                <p>
-                I am quite adventorous I have done bungee jumping, scuba diving, snorkelling, hiking, enjoy swimming, traveling, and playing cricket and chess.
-                </p>
+                        and AI-driven solutions.
+						</p>
+						<p>
+						I am a data Enthusiast with a passion for technology, I believe that data is the most powerful thing to change the Business. My skills include data analysis, visualization, and machine learning. I have developed a strong acumen for problem solving, and I enjoy an occasional challenge. I often work on end-to-end data science projects that usually begin from collecting data from third party sources.
+						</p>						
+						To give back to the community, I plant samplings and volunteer in Blood Donation camps.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Projects Section -->
-    <div class="section projects" id="projects">
-        <div class="container">
-            <h2 class="section-heading">Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h4>ETL Pipeline</h4>
+    <div class="container projects" id="projects">
+        <h2 class="section-heading">Projects</h2>
+        <div class="filter-buttons">
+            <button class="btn active" data-filter="all">All</button>
+             <button class="btn" data-filter="ai">Data Science</button>
+			<button class="btn" data-filter="etl">ETL</button>
+            <button class="btn" data-filter="mainframe">Mainframe</button>
+        </div>
+        <div class="row">
+           <!-- AI Project -->
+            <div class="col-md-4 project-card ai active">
+                <div class="card">
+                    <img src="images/skills/Data0.png" class="card-img-top" alt="AI Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Data science Intern project</h5>
+                        <p>Built a predictive model using Python and SVR.</p>
+                        <div class="tags">
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-md-4 project-card ai active">
+                <div class="card">
+                    <img src="images/skills/Data1.png" class="card-img-top" alt="AI Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Data activism project</h5>
+                        <p>Analyzing data: Using data and metadata to reconstruct facts.</p>
+                        <div class="tags">
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-md-4 project-card ai active">
+                <div class="card">
+                    <img src="images/skills/Data2.png" class="card-img-top" alt="AI Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Opening Move Effectiveness</h5>
+                        <p>Analyzing opening moves: Using API data to find the best opening moves.</p>
+                        <div class="tags">
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!-- ETL Project -->
+            <div class="col-md-4 project-card etl active">
+                <div class="card">
+                    <img src="images/skills/ETL.png" class="card-img-top" alt="ETL Project">
+                    <div class="card-body">
+                        <h5 class="card-title">ETL Pipeline</h5>
                         <p>Designed scalable ETL processes using Informatica and Oracle.</p>
+                        <div class="tags">
+                            <span>ETL Migration</span>
+                            <span>Data Warehousing</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h4>AI Model</h4>
-                        <p>Built a predictive model using Python and TensorFlow.</p>
+            </div>
+			<div class="col-md-4 project-card etl active">
+                <div class="card">
+                    <img src="images/skills/ETLM.png" class="card-img-top" alt="ETL Project">
+                    <div class="card-body">
+                        <h5 class="card-title">ETL Pipeline</h5>
+                        <p>Designed scalable ETL processes using Informatica and Oracle.</p>
+                        <div class="tags">
+                            <span>ETL Migration</span>
+                            <span>Data Warehousing</span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card p-3">
-                        <h4>Mainframe Automation</h4>
-                        <p>Streamlined legacy systems with COBOL and JCL.</p>
+            </div>
+            <div class="col-md-4 project-card etl active">
+                <div class="card">
+                    <img src="images/skills/ETLA.png" class="card-img-top" alt="ETL Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Advanced ETL Framework</h5>
+                        <p>Implemented automation scripts to ensure seamless data extraction and transformation from multiple sources, reducing manual intervention by 80%.</p>
+                        <div class="tags">
+                            <span>ETL Automation</span>
+                            <span>Real-time Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mainframe Project -->
+            <div class="col-md-4 project-card mainframe active">
+                <div class="card">
+                    <img src="images/skills/main1.png" class="card-img-top" alt="Mainframe Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Mainframe Product</h5>
+                        <p>Anthem Health Rewards.</p>
+                        <div class="tags">
+                            <span>Mainframe</span>
+                            <span>Legacy Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-md-4 project-card mainframe active">
+                <div class="card">
+                    <img src="images/skills/main0.png" class="card-img-top" alt="Mainframe Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Mainframe Automation</h5>
+                        <p>Streamlined legacy systems with COBOL and JCL automation.</p>
+                        <div class="tags">
+                            <span>Mainframe</span>
+                            <span>Legacy Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-md-4 project-card mainframe active">
+                <div class="card">
+                    <img src="images/skills/main2.png" class="card-img-top" alt="Mainframe Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Mainframe Automation</h5>
+                        <p>Streamlined legacy systems with COBOL and JCL automation.</p>
+                        <div class="tags">
+                            <span>Mainframe</span>
+                            <span>Legacy Systems</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Certificates Section -->
-    <div class="section certificates" id="certificates">
-        <div class="container">
-            <h2 class="section-heading">Certificates</h2>
-            <p>Certified in Data Science, Machine Learning, and Cloud Computing.</p>
+   <!-- Certificates Section -->
+<div class="section certificates" id="certificates">
+    <div class="container">
+        <h2 class="section-heading">Certificates</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm border-0">
+                    <div class="card-body">
+                        <i class="fas fa-award fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title">ITIL Certification</h5>
+                        <p class="card-text">Registration Number: 5811340</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card text-center shadow-sm border-0">
+                    <div class="card-body">
+                        <i class="fas fa-user-shield fa-3x text-success mb-3"></i>
+                        <h5 class="card-title">HIPAA Certified</h5>
+                        <p class="card-text">Health Insurance Portability and Accountability Act</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
+</div>
+	<!-- Skillset Section -->
+<div class="section skillset" id="skillset">
+    <div class="container">
+        <h2 class="section-heading">Skillset</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-code fa-3x mb-3 text-primary"></i>
+                    <h5>Programming</h5>
+                    <p>Python, R, COBOL, EASYTRIEVE</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-terminal fa-3x mb-3 text-success"></i>
+                    <h5>Scripting</h5>
+                    <p>PowerShell</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-database fa-3x mb-3 text-danger"></i>
+                    <h5>Database</h5>
+                    <p>SQL, Snowflake, Oracle, DB2</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-chart-pie fa-3x mb-3 text-info"></i>
+                    <h5>Data Visualization</h5>
+                    <p>Power BI, Tableau</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-cloud fa-3x mb-3 text-warning"></i>
+                    <h5>Cloud Platforms</h5>
+                    <p>Azure, AWS</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-code-branch fa-3x mb-3 text-secondary"></i>
+                    <h5>Version Control</h5>
+                    <p>GIT</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-cogs fa-3x mb-3 text-dark"></i>
+                    <h5>ETL Tool</h5>
+                    <p>Informatica Power Center 9.1x</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="skill-card p-4 shadow-sm mb-4">
+                    <i class="fas fa-user-friends fa-3x mb-3 text-primary"></i>
+                    <h5>Soft Skills</h5>
+                    <p>Communication, Problem-solving, Critical thinking</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
     <!-- Footer -->
     <footer id="contact">
-        <p>Connect with me on 
-            <div class="social-icons">
-                <a href="https://github.com/Anandsgithub" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/anand-datascientist/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </p>
+        <p>Connect with me on:</p>
+        <div class="social-icons">
+            <a href="https://github.com/Anandsgithub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/anand-datascientist/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const filter = button.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filter === 'all' || card.classList.contains(filter)) {
+                            card.classList.add('active');
+                        } else {
+                            card.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
