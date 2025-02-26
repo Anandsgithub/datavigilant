@@ -35,7 +35,7 @@ I am a resourceful professional with diverse experience in data, I possess a str
 ***
 
 ## Skillset
-| Programming | Python, R, COBOL, EASYTRIEVE |
+- Programming | Python, R, COBOL, EASYTRIEVE |
 | ETL Tool | Informatica |
 | Scripting | Unix, Powershell | 
 | Database | SQL | DB2 | Oracle | Snowflake | 
