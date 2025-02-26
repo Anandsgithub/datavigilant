@@ -1,12 +1,12 @@
 # 🗺 Anand's Portfolio
 
-Welcome to my data portfolio! Here, I document a summary of my projects in the data field. 
+I am a resourceful professional with diverse experience in data, I possess a strong background in Python and R for programming, proficiency in SQL, DB2, Oracle, and Snowflake for database management, and expertise in ETL processes using Informatica Power Center 9.1x. Skilled in data visualization with Power BI, I have streamlined data processing and reporting, significantly enhancing data retrieval efficiency across various industries. I am adept at translating complex data into actionable business insights.
 
 ## 📚 Table of Contents
 - [Python](#python)
-- [Informatica] (#informatica)
+- [Informatica](#informatica)
 - [SQL](#sql)
-- [Unix] (#unix)
+- [Unix](#unix)
 - [Power BI](#powerbi)
 
 
@@ -30,10 +30,8 @@ Welcome to my data portfolio! Here, I document a summary of my projects in the d
 | Project Topic | Project Description | Tools |
 |---|---|---|
 | Healthcare Membership Enrollment Automation |This project focuses on automating the enrollment process for healthcare insurance memberships. Customers can enroll individually, as groups, or as families. All customer details are stored and processed through batch processing, ensuring efficient and accurate data handling. The system leverages mainframe technologies to streamline and automate legacy processes, reducing manual intervention and improving overall efficiency. | COBOL, EASYTRIEVE, DB2, VSAM, JCL, SPUFI, Endevor R4.0, Change man, Insync V2.7, FMIMS, JCL | 
-| Anthem Health Rewards Program | This project focuses on developing and automating the enrollment process for Anthem Health Rewards, a program designed to incentivize healthy behaviors among members. Enrollment for Health Rewards: Seamlessly automates the enrollment process for Anthem Health Rewards
-System Integration: Integrates with multiple downstream systems for further data processing and updates. | COBOL, DB2, VSAM, JCL, SPUFI, Endevor R4.0, Change man, Insync V2.7, FMIMS, JCL, CA-7 |  
-| Generating Reports for Unpaid Claims and Verifying Provider Details | This project focuses on generating comprehensive reports of providers with unpaid claims. It ensures that the billing process remains uninterrupted by verifying addresses and other demographic details. Data Verification: Implemented processes to verify provider addresses and demographic details. Error Handling: Developed robust error handling and logging mechanisms to ensure data integrity.
-System Integration: Integrated with existing billing systems to ensure seamless data flow. |  EASYTRIEVE, DB2, JCL |  
+| Anthem Health Rewards Program | This project focuses on developing and automating the enrollment process for Anthem Health Rewards, a program designed to incentivize healthy behaviors among members. Enrollment for Health Rewards: Seamlessly automates the enrollment process for Anthem Health Rewards System Integration: Integrates with multiple downstream systems for further data processing and updates. | COBOL, DB2, VSAM, JCL, SPUFI, Endevor R4.0, Change man, Insync V2.7, FMIMS, JCL, CA-7 |  
+| Generating Reports for Unpaid Claims and Verifying Provider Details | This project focuses on generating comprehensive reports of providers with unpaid claims. It ensures that the billing process remains uninterrupted by verifying addresses and other demographic details. Data Verification: Implemented processes to verify provider addresses and demographic details. Error Handling: Developed robust error handling and logging mechanisms to ensure data integrity. System Integration: Integrated with existing billing systems to ensure seamless data flow. |  EASYTRIEVE, DB2, JCL |  
 ***
 
 #Skillset
