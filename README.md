@@ -35,12 +35,12 @@ I am a resourceful professional with diverse experience in data, I possess a str
 ***
 
 ## Skillset
-- Programming | Python, R, COBOL, EASYTRIEVE
-- ETL Tool | Informatica 
-- Scripting | Unix, Powershell
-- Database | SQL | DB2 | Oracle | Snowflake
-- Data Visualisation | PowerBI | Tableau
-- Cloud Platforms | AWS | Azure
-- Version control | GIT
-- Web technologies | HTML | CSS | JS | PHP
-- Soft skills | Problem solver | Critical thinking | Communication
+- Programming : Python, R, COBOL, EASYTRIEVE
+- ETL Tool : Informatica 
+- Scripting : Unix, Powershell
+- Database : SQL, DB2, Oracle, Snowflake
+- Data Visualisation : PowerBI, Tableau
+- Cloud Platforms : AWS, Azure
+- Version control : GIT
+- Web technologies : HTML, CSS, JS, PHP
+- Soft skills : Problem solver, Critical thinking, Communication
