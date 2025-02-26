@@ -43,4 +43,4 @@ I am a resourceful professional with diverse experience in data, I possess a str
 - Cloud Platforms : AWS, Azure
 - Version control : GIT
 - Web technologies : HTML, CSS, JS, PHP
-- Soft skills : Problem solver, Critical thinking, Communication
+- Soft skills : Problem solving, Critical thinking, Communication
