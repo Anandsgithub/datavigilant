@@ -34,7 +34,7 @@ I am a resourceful professional with diverse experience in data, I possess a str
 | Generating Reports for Unpaid Claims and Verifying Provider Details | This project focuses on generating comprehensive reports of providers with unpaid claims. It ensures that the billing process remains uninterrupted by verifying addresses and other demographic details. Data Verification: Implemented processes to verify provider addresses and demographic details. Error Handling: Developed robust error handling and logging mechanisms to ensure data integrity. System Integration: Integrated with existing billing systems to ensure seamless data flow. |  EASYTRIEVE, DB2, JCL |  
 ***
 
-#Skillset
+##Skillset
 | Programming | Python, R, COBOL, EASYTRIEVE |
 | ETL Tool | Informatica |
 | Scripting | Unix, Powershell | 
