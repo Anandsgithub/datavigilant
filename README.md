@@ -18,30 +18,30 @@ I am a resourceful professional with diverse experience in data, I possess a str
 | A Data Science Dive into Chess Strategy
 This project blends chess intelligence with data science to extract real strategic insights from online games â€” perfect for chess lovers and data enthusiasts alike.
 
-ðŸš€ Project Highlights
-ðŸ“¥ Real-Time Game Extraction
+Project Highlights
+Real-Time Game Extraction
 Fetches the 50 latest rated games of any Lichess user, including opening data.
 Stores data in NDJSON format and performs integrity checks to ensure clean, usable input.
 
-ðŸ§¹ Data Transformation & Feature Engineering
+Data Transformation & Feature Engineering
 Parses game data into a structured pandas DataFrame.
 Extracts opening names, ECO codes, player ratings, and match results.
 Handles missing values and formats outcomes for accurate analysis.
 
-ðŸ“Š Opening Performance Analytics
+Opening Performance Analytics
 Calculates win rates by opening for both White and Black.
 Highlights the Top 10 openings by win rate.
 Visualized with Seaborn bar charts for intuitive comparisons.
 
-â™Ÿï¸ Move Pattern & Piece Activity Analysis
+Move Pattern & Piece Activity Analysis
 Parses PGN move strings to quantify how often each piece is moved.
 Calculates average piece activity and visualizes relationships using heatmaps.
 
-ðŸ“ˆ Interactive Streamlit Dashboard
+Interactive Streamlit Dashboard
 An intuitive web interface to explore opening performance and piece activity.
 Includes interactive charts and key strategic stats.
 
-ðŸŽ¯ Simulated Strategic Metrics (Sample Data)
+Simulated Strategic Metrics (Sample Data)
 Simulates and visualizes:
 Win rate by opening
 Average piece development
@@ -49,11 +49,11 @@ Center control influence
 Piece activity levels
 Castling speed (king safety)
 
-ðŸ§  Visual Chess Insights
+Visual Chess Insights
 Uses Matplotlib to model pawn structures, central control, and chain formations.
 Generates heatmaps and descriptive statistics for all core metrics.
 
-ðŸ”§ Tech Stack & Tools
+Tech Stack & Tools
 Languages: Python
 Libraries: pandas, numpy, seaborn, matplotlib, streamlit, requests, python-chess, json
 Techniques: NDJSON parsing, PGN analysis, data cleaning, statistical modeling, simulation, visual storytelling |
